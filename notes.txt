@@ -5,3 +5,5 @@ font sizes:
 
 inspo: https://dribbble.com/shots/7118235-Weather-DailyUI-037
      https://www.shutterstock.com/image-vector/cloudly-weather-widget-ui-design-beauty-2180246665
+     
+design for mobile and desktop:
