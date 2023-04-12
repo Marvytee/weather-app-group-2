@@ -1,9 +1,28 @@
-background colors:
-text colors:
-font:
-font sizes:
+Design ideas based on first picture inspiration (https://dribbble.com/shots/7118235-Weather-DailyUI-037)
+     background colors:
+           Main-container:  radial-gradient(circle, rgba(21,129,144,1) 0%, rgba(3,50,107,1) 100%);
+           content-container: #8d8a8a with 0.7 opacity
 
-inspo: https://dribbble.com/shots/7118235-Weather-DailyUI-037
-     https://www.shutterstock.com/image-vector/cloudly-weather-widget-ui-design-beauty-2180246665
+     text colors: #e4e3e3
+
+     font-family: Barlow (https://fonts.google.com/specimen/Barlow)
+
+     font sizes:
+          For Headers and heading - Medium 500 / SemiBold 600
+          For Paragraphs and ordinary text - Regular 400
+
+
+Design ideas based on second picture inspiration (https://www.shutterstock.com/image-vector/cloudly-weather-widget-ui-design-beauty-2180246665)
+     background colors:
+          Main-container: linear-gradient(90deg, rgba(216,250,248,1) 0%, rgba(39,210,202,1) 41%, rgba(22,178,204,1) 100%);
+          content-container: #294757
+
+     text colors: #07424b
+
+     font-family: Inter (https://fonts.google.com/specimen/Inter?query=inter)
+
+     font sizes:
+          For Headers and heading - SemiBold 600
+          For Paragraphs and ordinary text - Regular 400/ Light 300
      
 design for mobile and desktop:
