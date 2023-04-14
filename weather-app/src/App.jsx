@@ -20,6 +20,36 @@ const icons = {
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
+  const currentDate = new Date();
+  const month = currentDate.getMonth() + 1;
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const currentMonth = monthNames[month - 1];
+  const day = currentDate.getDay();
+  const dayOfWeek = daysOfWeek[day];
+  const date = `${dayOfWeek}, ${currentDate.getDate()} ${currentMonth}`;
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -93,24 +123,26 @@ function App() {
         <>
           <div className="top">
             <div className="left">
-              <section className="location">
-                <h1>
-                  {weatherData.name}, {weatherData.region}
-                </h1>
-                <img src={weatherData.icon} className="icon" />
-              </section>
               <section className="temperature">
-                <h2 className="temperature-degree">
-                  {weatherData.temp_c}&deg;C/{weatherData.temp_f}&deg;F
-                </h2>
                 <div className="temperature-description">
                   {weatherData.text}
                 </div>
-                <h3 className="feels-like">
+                <h2 className="temperature-degree">
+                  {weatherData.temp_c}&deg;C/{weatherData.temp_f}&deg;F
+                </h2>
+                {/* <h3 className="feels-like">
                   {" "}
                   Feels like {weatherData.feelslike_c}&deg;C/
                   {weatherData.feelslike_f}&deg;F
-                </h3>
+                </h3> */}
+              </section>
+              <section className="location">
+                <div>
+                  <h1>{weatherData.name}</h1>
+                  <div>{date}</div>
+                </div>
+
+                <img src={weatherData.icon} className="icon" />
               </section>
             </div>
 
@@ -120,7 +152,7 @@ function App() {
                   <h2>
                     <img
                       src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/wind.svg"
-                      className="wind-img"
+                      className="conIcons"
                     />
                     Wind:{" "}
                     <span className="labels">
@@ -132,7 +164,7 @@ function App() {
                   <h2>
                     <img
                       src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/humidity.svg"
-                      className="humidity-img"
+                      className="conIcons"
                     />
                     Humidity:{" "}
                     <span className="labels">{weatherData.humidity} %</span>
@@ -142,7 +174,7 @@ function App() {
                   <h2>
                     <img
                       src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/rain.svg"
-                      className="rainfall-img"
+                      className="conIcons"
                     />
                     Rainfall:{" "}
                     <span className="labels">{weatherData.precip_mm} mm</span>
@@ -153,7 +185,7 @@ function App() {
                   <h2>
                     <img
                       src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/uv-index.svg"
-                      className="uv-img"
+                      className="conIcons"
                     />
                     UV index: <span className="labels">{weatherData.uv}</span>
                   </h2>
@@ -162,7 +194,7 @@ function App() {
                   <h2>
                     <img
                       src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/pressure-high.svg"
-                      className="pressure-img"
+                      className="conIcons"
                     />
                     Pressure:{" "}
                     <span className="labels">{weatherData.pressure_mb} mb</span>

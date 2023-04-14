@@ -1,3 +1,26 @@
 h1{
   color: black;
 }
+
+.conIcons{
+  width: 60px;
+  height: 60px;
+}
+
+.icon{
+  width: 80px;
+  height: 80px;
+}
+
+
+.left{
+  width: 100%;
+  background-color: rgb(174, 174, 211);
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location{
+  display: flex;
+}
