@@ -121,7 +121,7 @@ function App() {
     <div>
       {weatherData && (
         <>
-          <div>
+          <div className='wrapper'>
             <div className='weather-container'>
               <section className='temperature'>
                 <div className='temperature-description'>

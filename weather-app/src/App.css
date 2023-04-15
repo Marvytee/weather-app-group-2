@@ -1,3 +1,7 @@
+.wrapper{
+  width: 100%;
+}
+
 .weather-container {
   border-style: none;
   border: 1px solid #294757;
@@ -10,6 +14,7 @@
   gap: 20px;
   align-items: center;
 }
+
 
 .conIcons {
   width: 60px;
@@ -26,7 +31,9 @@
 
 .right {
   color: #2e3334;
-  font-size: 15px;
+  font-size: 20px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .location {
@@ -38,10 +45,10 @@
 .bottom {
   color: #00414bd2;
   margin: 3rem 10px;
-  font-size: 0.5rem;
+  font-size:1rem;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
 }
 
 .weather-detail {
@@ -55,18 +62,36 @@
 
 .temperature-description {
   margin-bottom: 1rem;
+  font-size: 26px;
 }
 
 .date {
-  font-size: 0.7rem;
+  font-size: 1.5rem;
   margin-top: 25px;
+}
+
+.weather-detail{
+  font-size: 24px;
+  background-color: rgba(11.4%, 18.4%, 22.4%, 0.5);
+  border-radius: 0.5em;
+}
+
+.weather-detail .conIcons{
+  width: 100px;
+  height: 100px;
 }
 
 .weather-detail span {
   color: #2e3334;
   font-weight: light;
+  font-size: 20px;
+  margin-left: 0.5em;
 }
 
 .weather {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
   margin-top: 2rem;
 }
+
