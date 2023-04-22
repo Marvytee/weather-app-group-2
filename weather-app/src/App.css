@@ -27,8 +27,8 @@
   width: 80px;
   height: 80px;
   position: absolute;
-  top: -10px;
-  right: 25px;
+  top: 0rem;
+  right: 0rem;
 }
 
 .right {
@@ -99,13 +99,21 @@
 
 @media only screen and (min-width: 768px) {
   .weather-container{
-    width: 50%;
+    width: 70%;
     align-self: center;
     justify-self: center;
     margin-top: 8em;
-    border-radius: 0.5em;
+    border-radius: 0.5em;;
   }
   
   /* Karen add your css here */
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 10rem;
+    right: 17rem;
+  }
 }
 
