@@ -121,13 +121,13 @@ function App() {
     <div>
       {weatherData && (
         <>
-          <div className='wrapper'>
-            <div className='weather-container'>
-              <section className='temperature'>
-                <div className='temperature-description'>
+          <div className="wrapper">
+            <div className="weather-container">
+              <section className="temperature">
+                <div className="temperature-description">
                   {weatherData.text}
                 </div>
-                <h2 className='temperature-degree'>
+                <h2 className="temperature-degree">
                   {weatherData.temp_c}&deg;C/{weatherData.temp_f}&deg;F
                 </h2>
                 {/* <h3 className="feels-like">
@@ -136,91 +136,91 @@ function App() {
                   {weatherData.feelslike_f}&deg;F
                 </h3> */}
               </section>
-              <section className='location'>
+              <section className="location">
+                <img src={weatherData.icon} className="icon" />
                 <div>
-                  <h1 className='location'>{weatherData.name}</h1>
-                  <div className='date'>
+                  <h1 className="location">{weatherData.name}</h1>
+                  <div className="date">
                     <small>{date}</small>
                   </div>
                 </div>
-                <img src={weatherData.icon} className='icon' />
               </section>
             </div>
-            <div className='right'>
-              <section className='weather'>
-                <section className='weather-detail'>
+            <div className="right">
+              <section className="weather">
+                <section className="weather-detail">
                   <div>
                     <img
-                      src='https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/wind.svg'
-                      className='conIcons'
+                      src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/wind.svg"
+                      className="conIcons"
                     />
                   </div>
                   <div>
                     Wind:
-                    <span className='labels'>
+                    <span className="labels">
                       {weatherData.wind_kph}km/h {weatherData.wind_dir}
                     </span>
                   </div>
                 </section>
-                <section className='weather-detail'>
+                <section className="weather-detail">
                   <div>
                     <img
-                      src='https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/humidity.svg'
-                      className='conIcons'
+                      src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/humidity.svg"
+                      className="conIcons"
                     />
                   </div>
                   <div>
                     Humidity:
-                    <span className='labels'>{weatherData.humidity}</span>
+                    <span className="labels">{weatherData.humidity}</span>
                   </div>
                 </section>
-                <section className='weather-detail'>
+                <section className="weather-detail">
                   <div>
                     <img
-                      src='https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/rain.svg'
-                      className='conIcons'
+                      src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/rain.svg"
+                      className="conIcons"
                     />
                   </div>
                   <div>
-                    Rainfall:{' '}
-                    <span className='labels'>{weatherData.precip_mm} mm</span>
+                    Rainfall:{" "}
+                    <span className="labels">{weatherData.precip_mm} mm</span>
                   </div>
                 </section>
-                <section className='weather-detail'>
+                <section className="weather-detail">
                   <div>
                     <img
-                      src='https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/uv-index.svg'
-                      className='conIcons'
+                      src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/uv-index.svg"
+                      className="conIcons"
                     />
                   </div>
                   <div>
-                    UV index: <span className='labels'>{weatherData.uv}</span>
+                    UV index: <span className="labels">{weatherData.uv}</span>
                   </div>
                 </section>
-                <section className='weather-detail'>
+                <section className="weather-detail">
                   <div>
                     <img
-                      src='https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/pressure-high.svg'
-                      className='conIcons'
+                      src="https://raw.githubusercontent.com/basmilius/weather-icons/87a143a3ca6a50d8e9cbd0f38eb3f31d7cf48053/design/fill/final/pressure-high.svg"
+                      className="conIcons"
                     />
                   </div>
                   <div>
-                    Pressure:{' '}
-                    <span className='labels'>{weatherData.pressure_mb} mb</span>
+                    Pressure:{" "}
+                    <span className="labels">{weatherData.pressure_mb} mb</span>
                   </div>
                 </section>
               </section>
             </div>
           </div>
-          <div className='bottom'>
-            <p className='updated-text'>
+          <div className="bottom">
+            <p className="updated-text">
               last updated {weatherData.last_updated}
             </p>
           </div>
         </>
       )}
     </div>
-  )
+  );
 }
 
 export default App
